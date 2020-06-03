@@ -1,6 +1,14 @@
-# flutterquote
+# Flutter App - Quotes App - Flutter UI
 
-A new Flutter application.
+## [Watch it on YouTube](https://youtu.be/QGUNF9vnJHo)
+
+We design a simple mobile app by using flutter.
+
+### Quotes App Final UI
+
+![App UI](https://github.com/ravi84184/flutter_quote/blob/master/ss.png)
+
+
 
 ## Getting Started
 
