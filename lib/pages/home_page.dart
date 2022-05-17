@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   var apiURL = "https://type.fit/api/quotes";
 
   Future<List<dynamic>> getPost() async {
-    final response = await http.get('$apiURL');
+    final response = await http.get(Uri.parse('$apiURL'));
     return postFromJson(response.body);
   }
 
