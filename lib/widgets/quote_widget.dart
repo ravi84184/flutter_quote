@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -6,10 +7,18 @@ class QuoteWidget extends StatelessWidget {
   var author = "";
   var onShareClick;
   var onLikeClick;
+  var onNextClick;
+  var onPrClick;
   var bgColor;
 
-
-  QuoteWidget({this.bgColor,this.quote, this.author, this.onShareClick, this.onLikeClick});
+  QuoteWidget(
+      {this.bgColor,
+      this.quote,
+      this.author,
+      this.onNextClick,
+      this.onPrClick,
+      this.onShareClick,
+      this.onLikeClick});
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +28,7 @@ class QuoteWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Spacer(
-            flex: 2,
-          ),
+          Spacer(),
           Image.asset(
             "assets/quote.png",
             height: 30,
@@ -44,44 +51,7 @@ class QuoteWidget extends StatelessWidget {
             author,
             style: GoogleFonts.lato(
               textStyle:
-              TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Spacer(),
-          Container(
-            alignment: Alignment.center,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                InkWell(
-                  onTap: onLikeClick,
-                  child: Container(
-                    margin: EdgeInsets.only(left: 10),
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(width: 1, color: Colors.white)),
-                    padding: EdgeInsets.all(10),
-                    child: Icon(
-                      Icons.favorite,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                InkWell(
-                  onTap: onShareClick,
-                  child: Container(
-                    margin: EdgeInsets.only(left: 10),
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(width: 1, color: Colors.white)),
-                    padding: EdgeInsets.all(10),
-                    child: Icon(
-                      Icons.share,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ],
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),
           ),
           Spacer(),
